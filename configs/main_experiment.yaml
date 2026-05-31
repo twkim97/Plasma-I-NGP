@@ -1,0 +1,88 @@
+experiment:
+  name: plasma_surrogate_release
+  seed: 42
+
+data:
+  input_dim: 5
+  output_dim: 3
+  input_keys: [r, z, t, J, tau_ns]
+  output_keys: [v, p, rho]
+
+normalization:
+  type: psln
+  percentile: 99
+  scale_constant: 1.0e9
+
+training:
+  batch_size: 1024
+  epochs: 10
+  optimizer: adam
+  learning_rate: 1.0e-4
+  scheduler: cosine
+  amp: true
+  grad_clip: 1.0
+
+checkpoint:
+  save_dir: checkpoints
+  save_every: 10
+
+model:
+  name: instant_ngp
+  params:
+    log2_hashmap_size: 16
+    per_level_scale: 1.3
+    hidden_dim: 128
+    n_hidden_layers: 3
+
+baselines:
+  siren:
+    name: siren
+    params:
+      hidden_dim: 512
+      n_hidden_layers: 6
+
+  nerf:
+    name: nerf
+    params:
+      trunk_width: 512
+      trunk_depth: 6
+
+  deeponet:
+    name: deeponet
+    params:
+      hidden_dim: 512
+      n_hidden_layers: 2
+      rank: 512
+
+
+data:
+  input_path: examples/sample_input.npy
+  output_path: examples/sample_output.npy
+
+  input_dim: 5
+  output_dim: 3
+  input_keys: [r, z, t, J, tau_ns]
+  output_keys: [v, p, rho]
+
+  input_normalization:
+    r: identity
+    z: identity
+    t: divide_by_100
+    J: log1p_divide_by_10
+    tau_ns: divide_by_100
+    
+evaluation:
+  t_start: 0
+  t_end: 30
+  t_step: 2
+
+split:
+  type: condition
+
+  train:
+    tau_10ns: [0.01, 0.03, 0.1, 1.0, 1.5, 2.5]
+    tau_5ns: [0.01, 0.05, 0.5, 1.3, 2.0, 2.5]
+
+  test:
+    tau_10ns: [0.05, 0.3, 0.5, 1.3, 2.0, 2.3]
+    tau_5ns: [0.03, 0.3, 1.0, 1.5, 2.3]

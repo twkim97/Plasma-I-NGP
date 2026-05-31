@@ -1,0 +1,165 @@
+{
+  "metric": "SLRMSE",
+  "aggregation": "field-wise RMSE at each time step -> RMS over time -> mean over fields",
+  "field_names": [
+    "v",
+    "p",
+    "rho"
+  ],
+  "time_values": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30
+  ],
+  "conditions": [
+    {
+      "tau_ns": 10.0,
+      "J": 0.05,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.03975581356924523,
+      "SLRMSE_v": 0.06520351119707862,
+      "SLRMSE_p": 0.03892456253025497,
+      "SLRMSE_rho": 0.015139366980402087,
+      "global_RMSE_aux": 0.04470577820139846
+    },
+    {
+      "tau_ns": 10.0,
+      "J": 0.3,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.05274601157304585,
+      "SLRMSE_v": 0.07852148866447137,
+      "SLRMSE_p": 0.0575985191824999,
+      "SLRMSE_rho": 0.022118026872166307,
+      "global_RMSE_aux": 0.05765535416813117
+    },
+    {
+      "tau_ns": 10.0,
+      "J": 0.5,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.040737819167605153,
+      "SLRMSE_v": 0.06494635639933921,
+      "SLRMSE_p": 0.041292501642824324,
+      "SLRMSE_rho": 0.015974599460651908,
+      "global_RMSE_aux": 0.045380934173559914
+    },
+    {
+      "tau_ns": 10.0,
+      "J": 1.3,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.030154283308383992,
+      "SLRMSE_v": 0.04844814200822467,
+      "SLRMSE_p": 0.029659779288994527,
+      "SLRMSE_rho": 0.012354928627932794,
+      "global_RMSE_aux": 0.033563719207759614
+    },
+    {
+      "tau_ns": 10.0,
+      "J": 2.0,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.029996157796736863,
+      "SLRMSE_v": 0.04656217673381024,
+      "SLRMSE_p": 0.03163969138656805,
+      "SLRMSE_rho": 0.011786605269832282,
+      "global_RMSE_aux": 0.03320658015160468
+    },
+    {
+      "tau_ns": 10.0,
+      "J": 2.3,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.026238720725577452,
+      "SLRMSE_v": 0.04096957329837604,
+      "SLRMSE_p": 0.02649647813544628,
+      "SLRMSE_rho": 0.01125011074291004,
+      "global_RMSE_aux": 0.028908664871101546
+    },
+    {
+      "tau_ns": 5.0,
+      "J": 0.03,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.049042420171949985,
+      "SLRMSE_v": 0.07433616331029543,
+      "SLRMSE_p": 0.05292296251834699,
+      "SLRMSE_rho": 0.01986813468720754,
+      "global_RMSE_aux": 0.05391798212287228
+    },
+    {
+      "tau_ns": 5.0,
+      "J": 0.3,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.0432005683114808,
+      "SLRMSE_v": 0.06808898376996496,
+      "SLRMSE_p": 0.04486242545588354,
+      "SLRMSE_rho": 0.016650295708593887,
+      "global_RMSE_aux": 0.04804852152416166
+    },
+    {
+      "tau_ns": 5.0,
+      "J": 1.0,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.03029085522817632,
+      "SLRMSE_v": 0.04656992861902964,
+      "SLRMSE_p": 0.03178127539495475,
+      "SLRMSE_rho": 0.01252136167054459,
+      "global_RMSE_aux": 0.03334462470777322
+    },
+    {
+      "tau_ns": 5.0,
+      "J": 1.5,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.028413306189143644,
+      "SLRMSE_v": 0.04218101779286381,
+      "SLRMSE_p": 0.030908240132014955,
+      "SLRMSE_rho": 0.012150660642552174,
+      "global_RMSE_aux": 0.030995676119167766
+    },
+    {
+      "tau_ns": 5.0,
+      "J": 2.3,
+      "num_time_steps": 16,
+      "num_samples": 524288,
+      "missing_times": [],
+      "SLRMSE": 0.022495090868794698,
+      "SLRMSE_v": 0.03475777898537282,
+      "SLRMSE_p": 0.020679705676787615,
+      "SLRMSE_rho": 0.012047787944223667,
+      "global_RMSE_aux": 0.024364613304817973
+    }
+  ],
+  "overall_condition_mean": {
+    "SLRMSE": 0.03573373153728546,
+    "num_conditions": 11
+  }
+}
