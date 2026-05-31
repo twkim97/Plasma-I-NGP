@@ -399,3 +399,13 @@ The final condition-wise score is obtained by averaging over the three physical 
 ```text
 SLRMSE = mean(SLRMSE_v, SLRMSE_p, SLRMSE_rho)
 ```
+---
+
+## Inference Demo
+
+An interactive Jupyter notebook version may not be available in this repository.
+A rendered HTML demo is provided instead:
+
+- `notebooks/inference_demo.html`
+
+This file shows how to load a trained checkpoint, run inference, and visualize predicted plasma fields.
